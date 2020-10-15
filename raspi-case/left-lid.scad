@@ -1,3 +1,4 @@
+/*
 BSD 2-Clause License
 
 Copyright (c) 2020, Ewald Stangl
@@ -23,3 +24,27 @@ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
 CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+length = 78;
+width = 125;
+height = 1.4;
+
+
+translate([0, 0, 0]) {
+    difference() {
+        cube([length, width, height]);
+        
+        translate([3.5, 3.5, -1]) {
+            cylinder(d = 4, h = 5, $fn = 60);
+        }
+        
+        translate([length - 3.5, width - 6.5, -1]) {
+            cylinder(d = 4, h = 5, $fn = 60);
+        }
+        
+        translate([10, width - 28, -1]) {
+            cube([7, 35, 5]);
+        }
+    }
+}

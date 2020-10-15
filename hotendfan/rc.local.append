@@ -1,0 +1,5 @@
+/usr/bin/gpio -1 mode 12 pwm
+/usr/bin/gpio -1 pwm 12 700
+/usr/bin/gpio -1 mode 33 pwm
+/usr/bin/gpio -1 pwm 33 700
+/usr/bin/gpio -1 mode 12 up
